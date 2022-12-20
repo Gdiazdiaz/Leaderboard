@@ -1,5 +1,5 @@
-function addScore(array,newScore){
-    array.push(newScore);
+function addScore(array, newScore) {
+  array.push(newScore);
 }
 
 export default addScore;

@@ -1,41 +1,44 @@
 .page-container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
-.page-title{
-    margin-left: 20px;
-}
-.scores-container{
-    display: flex;
-    flex-direction: column;
-}
-.recent-scores{
-    display: flex;
-    gap: 10px;
+.page-title {
+  margin-left: 20px;
 }
 
-#score-container{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border: solid #000 2px;
-    padding: 5px;
+.scores-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.list-item{
-    list-style: none;
+.recent-scores {
+  display: flex;
+  gap: 10px;
 }
 
-.score-button{
-    align-self: center;
-}
-#my-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+#score-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: solid #000 2px;
+  padding: 5px;
 }
 
-#add-button{
-    align-self: flex-end;
+.list-item {
+  list-style: none;
+}
+
+.score-button {
+  align-self: center;
+}
+
+#my-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#add-button {
+  align-self: flex-end;
 }
