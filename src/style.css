@@ -88,19 +88,29 @@ li {
 #podium1 {
   background-color: #ecb939;
   height: 140px;
-  width: 150px;
+  width: 140px;
   align-self: flex-end;
 }
 
 #podium2 {
   background-color: #372e29;
   height: 170px;
-  width: 150px;
+  width: 140px;
 }
 
 #podium3 {
   background-color: #f0c75e;
   height: 110px;
-  width: 150px;
+  width: 140px;
   align-self: flex-end;
+}
+
+@media (max-width: 768px){
+  .page-container{
+    flex-direction: column;
+  }
+
+  #podiums{
+    display: none;
+  }
 }

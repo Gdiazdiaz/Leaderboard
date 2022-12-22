@@ -6,6 +6,7 @@ import sortScores from './sortScores.js';
 const sectionForScores = document.querySelector('#score-container');
 const displayScores = async () => {
   const data = await getScores();
+  console.log(data);
   let scoreGenerator = '';
   sortScores(data.result);
   data.result.forEach((user) => {
