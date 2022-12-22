@@ -1,26 +1,31 @@
 import './style.css';
-import displayScores from './displayScores.js';
+import getScores from './getScores';
 import addScore from './addScore.js';
 
-const scores = [];
-
 const sectionForScores = document.querySelector('#score-container');
-displayScores(scores, sectionForScores);
-
-class Score {
-  constructor(name, score) {
-    this.name = name;
-    this.score = score;
+const displayScores = async () => {
+  const data = await getScores();
+  sectionForScores.innerHTML = '';
+  for (let i = data.result.length - 1; i >= 0; i -= 1) {
+    const li = document.createElement('li');
+    li.classList.add('score');
+    li.innerHTML = `${data.result[i].user}: ${data.result[i].score}`;
+    sectionForScores.appendChild(li);
   }
-}
 
+}
+displayScores();
 const myForm = document.getElementById('my-form');
 myForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value;
   const score = document.getElementById('score').value;
-  const newscore = new Score(name, score);
-  addScore(scores, newscore);
+  addScore(name, score);
   myForm.reset();
-  displayScores(scores, sectionForScores);
+  displayScores();
+});
+
+const refresh = document.querySelector('.score-button');
+refresh.addEventListener('click', async () => {
+  displayScores();
 });
