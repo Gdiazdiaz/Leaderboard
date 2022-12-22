@@ -1,6 +1,7 @@
-*{
+* {
   font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
 }
+
 .page-container {
   display: flex;
   justify-content: space-around;
@@ -53,9 +54,10 @@ li {
   cursor: pointer;
 }
 
-.add-container{
+.add-container {
   margin-top: 80px;
 }
+
 #my-form {
   display: flex;
   flex-direction: column;
@@ -72,29 +74,31 @@ li {
   cursor: pointer;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
-#podiums{
+
+#podiums {
   position: fixed;
   display: flex;
   right: 0;
   bottom: 0;
 }
-#podium1{
+
+#podium1 {
   background-color: #ecb939;
   height: 140px;
   width: 150px;
   align-self: flex-end;
 }
 
-#podium2{
+#podium2 {
   background-color: #372e29;
   height: 170px;
   width: 150px;
 }
 
-#podium3{
+#podium3 {
   background-color: #f0c75e;
   height: 110px;
   width: 150px;
