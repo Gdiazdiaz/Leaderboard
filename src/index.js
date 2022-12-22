@@ -8,7 +8,6 @@ const displayScores = async () => {
   sectionForScores.innerHTML = '';
   for (let i = data.result.length - 1; i >= 0; i -= 1) {
     const li = document.createElement('li');
-    li.classList.add('score');
     li.innerHTML = `${data.result[i].user}: ${data.result[i].score}`;
     sectionForScores.appendChild(li);
   }
