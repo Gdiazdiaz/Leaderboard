@@ -1,5 +1,5 @@
 import './style.css';
-import getScores from './getScores';
+import getScores from './getScores.js';
 import addScore from './addScore.js';
 
 const sectionForScores = document.querySelector('#score-container');
@@ -12,8 +12,7 @@ const displayScores = async () => {
     li.innerHTML = `${data.result[i].user}: ${data.result[i].score}`;
     sectionForScores.appendChild(li);
   }
-
-}
+};
 displayScores();
 const myForm = document.getElementById('my-form');
 myForm.addEventListener('submit', (e) => {
