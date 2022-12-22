@@ -21,7 +21,6 @@ myForm.addEventListener('submit', (e) => {
   const score = document.getElementById('score').value;
   addScore(name, score);
   myForm.reset();
-  displayScores();
 });
 
 const refresh = document.querySelector('.score-button');

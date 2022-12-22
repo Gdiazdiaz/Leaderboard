@@ -9,7 +9,7 @@ const addScore = async (name, score) => {
         },
         body: JSON.stringify({
           user: name,
-          score,
+          score: score,
         }),
       },
     );
