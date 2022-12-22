@@ -1,15 +1,29 @@
+*{
+  font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
+}
 .page-container {
   display: flex;
   justify-content: space-around;
 }
 
 .page-title {
-  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  margin-top: 0;
+  background-color: #372e29;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: 'Playfair Display', 'Helvetica', 'Arial', sans-serif;
 }
 
 .scores-container {
   display: flex;
   flex-direction: column;
+  margin-top: 80px;
 }
 
 .recent-scores {
@@ -31,8 +45,17 @@ li {
 
 .score-button {
   align-self: center;
+  padding: 5px;
+  background-color: #ecb939;
+  color: #372e29;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+.add-container{
+  margin-top: 80px;
+}
 #my-form {
   display: flex;
   flex-direction: column;
@@ -40,5 +63,40 @@ li {
 }
 
 #add-button {
+  align-self: flex-end;
+  padding: 5px;
+  background-color: #ecb939;
+  color: #372e29;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bold{
+  font-weight: bold;
+}
+#podiums{
+  position: fixed;
+  display: flex;
+  right: 0;
+  bottom: 0;
+}
+#podium1{
+  background-color: #ecb939;
+  height: 140px;
+  width: 150px;
+  align-self: flex-end;
+}
+
+#podium2{
+  background-color: #372e29;
+  height: 170px;
+  width: 150px;
+}
+
+#podium3{
+  background-color: #f0c75e;
+  height: 110px;
+  width: 150px;
   align-self: flex-end;
 }
