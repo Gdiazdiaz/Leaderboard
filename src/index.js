@@ -1,16 +1,17 @@
 import './style.css';
 import getScores from './getScores.js';
 import addScore from './addScore.js';
+import sortScores from './sortScores.js';
 
 const sectionForScores = document.querySelector('#score-container');
 const displayScores = async () => {
   const data = await getScores();
-  sectionForScores.innerHTML = '';
-  for (let i = data.result.length - 1; i >= 0; i -= 1) {
-    const li = document.createElement('li');
-    li.innerHTML = `${data.result[i].user}: ${data.result[i].score}`;
-    sectionForScores.appendChild(li);
-  }
+  let scoreGenerator = '';
+  sortScores(data.result);
+  data.result.forEach((user) => {
+    scoreGenerator += `<li><span class="bold">Name:</span> ${user.user}  <span class="bold">  Score:</span> ${user.score}</li>`;
+  });
+  sectionForScores.innerHTML = scoreGenerator;
 };
 displayScores();
 const myForm = document.getElementById('my-form');
